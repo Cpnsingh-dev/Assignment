@@ -33,3 +33,4 @@ Comprehensive technical analysis of top-ranking Indian boarding school websites,
 - **Dynamic Fee Calculator:** Live tuition and boarding fee recalculation across Junior, Middle, and Senior divisions.
 - **360° Virtual Campus Tour:** Interactive location preview for remote/NRI parents.
 - **Sticky WhatsApp Quick Action:** Instant counselor consultation trigger.
+
