@@ -1,0 +1,66 @@
+================================================================================
+WEB DEVELOPMENT INTERNSHIP ASSIGNMENT SUBMISSION
+Client Project: Eduminatti / Top-Ranking Boarding Schools
+Candidate Submission
+================================================================================
+
+--------------------------------------------------------------------------------
+TASK 1: Site Analysis — Top-Ranking Boarding School
+Search Query: "Boarding Schools in India"
+Target Analyzed: Ecole Globale International Girls' School (https://www.ecoleglobale.com)
+Pages Audited: Homepage (/) & Admissions Page (/admission/admission-procedure/)
+--------------------------------------------------------------------------------
+
+1. SITE STRUCTURE & NAVIGATION:
+- The website organizes its primary menu into 8 clearly defined top-level items:
+  1. Home
+  2. About Us (About School, Vision & Mission, President Message, Mandatory Public Disclosure)
+  3. Admission (Procedure, Online Registration, Fees Structure, Online Payment, Withdrawal Policy)
+  4. Academics (CBSE Programme, Cambridge CI/IGCSE, Pedagogy, Placements)
+  5. Internationalism (Overview, Values & Culture, Exchange Programmes)
+  6. Student Life (Activities, Sports School, Expeditions, Community Service, Finishing School)
+  7. Pastoral Care (Overview, Infirmary, Dining Hall)
+  8. Career (Work Culture, Vacancies)
+- Logical Grouping: Yes, highly logical. Separating "Pastoral Care" (dining, medical infirmary, security) and "Student Life" from purely academic curricula directly reflects parental priorities when evaluating residential boarding schools.
+
+2. MOBILE RESPONSIVENESS:
+- Layout Adaptation: The site utilizes fluid grid/flexbox layouts and cleanly collapses into an accessible full-height off-canvas hamburger drawer on mobile.
+- Touch Targets: Sticky bottom quick-action triggers (phone call and WhatsApp) provide comfortable single-thumb reachability.
+- Area for Improvement: Hero banners combined with floating badges consume 35-40% of the initial mobile viewport height before user scroll.
+
+3. PAGE LOAD FEEL & PERFORMANCE:
+- Hydrated Route Transitions: Fast and smooth once loaded, powered by client-side Next.js route switching.
+- Initial Cold Load: Sluggish on 3G/4G cellular connections due to an unusually heavy HTML payload (~314 KB to 465 KB uncompressed HTML on content-light subpages) and autoplay background video competing with JavaScript hydration scripts.
+
+4. UX / TECHNICAL FLAW NOTICED:
+- Disconnected Funnel & Missing Breadcrumbs:
+  On the Admissions Procedure inner page (/admission/admission-procedure/), clicking "Online Registration Process" abruptly redirects users away from the modern Next.js interface to a legacy procedural PHP script (/registration/pay.php). This sudden shift breaks UI consistency, lowers brand trust, and hurts conversion tracking. Furthermore, subpages lack breadcrumb trails (Home > Admissions > Procedure), disorienting organic search visitors.
+
+5. RECOMMENDED REBUILD IMPROVEMENT:
+- Unified Multi-Step Interactive Admission Wizard:
+  Replace the disconnected legacy PHP page with an integrated React/Next.js multi-step modal stepper with client-side field validation, dynamic curriculum selection, document upload preview, and direct payment gateway integration (Razorpay/Stripe).
+
+
+--------------------------------------------------------------------------------
+TASK 2: Technical Stack Audit & Component Engineering
+Search Query: "Girls Boarding Schools in India"
+Subject: Ecole Globale International Girls' School (vs. competitors like Welham Girls / Mayo College)
+--------------------------------------------------------------------------------
+
+1. WHAT TECH / CMS IT IS BUILT ON:
+- Modern Headless Architecture:
+  * Frontend: Next.js (React) compiled with the Turbopack bundler (identified via /_next/static/chunks/turbopack-...).
+  * Backend / CMS: Headless WordPress utilized as a content repository and media storage layer (/wp-content/uploads/).
+  * Analytics: Google Tag Manager (GTM) and Google Analytics 4.
+  * Contrast: Legacy competitors (e.g. Welham Girls) remain on monolithic Bootstrap 3/4 and traditional Apache/PHP templates without modern client-side hydration or reactive components.
+
+2. RECOMMENDED FEATURE FOR COMPETITORS:
+- 360° Interactive Virtual Campus Tour with Lead-Gated Prospectus:
+  Given that prospective parents evaluate high-ticket boarding schools (fees ₹5L–₹15L+ annually) from overseas (NRIs) or distant metro cities, implementing a WebGL/360° interactive campus tour (dorms, equestrian arena, dining hall) with a low-friction WhatsApp inquiry gate dramatically elevates lead capture.
+
+3. RECREATED FRONTEND COMPONENT:
+- Built a modular, production-ready frontend experience located in the submitted repository / ZIP file:
+  * Modular Architecture: Separate CSS design tokens (variables.css, layout.css, components.css, modals.css) and decoupled JS modules (modal.js, fee-calc.js, wizard.js, tour.js, toast.js).
+  * Interactive 4-Step Admission Wizard (<dialog>) with real-time validation, dynamic fee projection, working coupon code (EARLYBIRD), and PDF receipt generator.
+  * Interactive 360° campus location switcher and sticky WhatsApp consultation pill.
+

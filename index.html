@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecole Globale International Girls' School | Admissions 2027–28</title>
+  <meta name="description"
+    content="Premier residential girls boarding school in Dehradun offering CBSE & Cambridge curricula.">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Top Announcement Notification -->
+  <div class="announcement-bar">
+    <span class="badge">Session 2027–2028</span>
+    <span>Admissions Open for Grades 4 through 11 | CBSE & Cambridge CIE Affiliated</span>
+  </div>
+
+  <!-- Global Header -->
+  <header>
+    <div class="brand-group">
+      <div class="brand-logo-crest" aria-hidden="true">EG</div>
+      <div class="brand-text">
+        <h1>Ecole Globale</h1>
+        <p>International Girls' School • Dehradun, India</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="btn btn-outline btn-sm" id="openTourBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+        </svg>
+        360° Virtual Campus
+      </button>
+      <button type="button" class="btn btn-primary btn-sm" id="headerApplyBtn">
+        Apply Now →
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <div class="hero-grid">
+
+      <!-- Left Context Column -->
+      <section class="context-panel">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="#">Home</a>
+          <span>›</span>
+          <a href="#">Admissions</a>
+          <span>›</span>
+          <span>Online Procedure & Registration</span>
+        </nav>
+
+        <h2 class="hero-title">Empowering Young Women with Global Excellence</h2>
+        <p class="hero-subtitle">
+          Nestled across 40 acres in the scenic hills of Dehradun, Ecole Globale provides an inspiring residential
+          learning environment blending world-class academic rigor with holistic leadership.
+        </p>
+
+        <!-- Institutional Metrics -->
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-number">#1</div>
+            <div class="stat-label">Girls Boarding School</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">1 : 8</div>
+            <div class="stat-label">Faculty Ratio</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Placement Record</div>
+          </div>
+        </div>
+
+        <!-- Virtual Tour Teaser Banner -->
+        <div class="tour-banner">
+          <div class="tour-banner-content">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
+              Explore 360° Interactive Campus
+            </h4>
+            <p>Tour residential dorms, equestrian grounds, science labs & dining halls from anywhere in the world.</p>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" id="bannerTourBtn">Launch Tour</button>
+        </div>
+      </section>
+
+      <!-- Right Column: Interactive Admission Card -->
+      <aside>
+        <div class="admission-card">
+          <div class="card-ribbon">
+            <span>Admissions 2027–28</span>
+            <span>★ Limited Seats</span>
+          </div>
+
+          <div class="card-body">
+            <h3 class="card-title">Admission Enquiry & Application</h3>
+            <p class="card-desc">Select your daughter's grade level below to check curriculum availability and fee
+              projections:</p>
+
+            <!-- Grade Filter Selector -->
+            <div class="grade-selector">
+              <span class="grade-selector-label">Target School Division</span>
+              <div class="pill-group" id="gradePillGroup">
+                <button type="button" class="pill-btn active" data-grade="Junior (Grades 4-6)"
+                  data-fee="₹7,50,000 / year">Junior (4–6)</button>
+                <button type="button" class="pill-btn" data-grade="Middle (Grades 7-9)"
+                  data-fee="₹8,25,000 / year">Middle (7–9)</button>
+                <button type="button" class="pill-btn" data-grade="Senior (Grades 10-12)"
+                  data-fee="₹9,10,000 / year">Senior (10–12)</button>
+              </div>
+            </div>
+
+            <!-- Dynamic Fee Projection Box -->
+            <div class="fee-estimator">
+              <div>
+                <span class="fee-estimator-label">Annual Boarding & Tuition Est.:</span>
+                <div style="font-size: 0.72rem; color: var(--text-muted);" id="gradeLabelDisplay">Junior (Grades 4-6)
+                </div>
+              </div>
+              <div class="fee-estimator-amount" id="feeAmountDisplay">₹7,50,000 / year</div>
+            </div>
+
+            <!-- Key Feature Checkpoints -->
+            <ul class="card-highlights">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Dual Affiliation: <strong>CBSE</strong> & <strong>Cambridge CAIE / IGCSE</strong>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Equestrian Training, Olympic Swimming & Rifle Shooting
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Pastoral Care with In-house Medical Center & Dedicated Dietician
+              </li>
+            </ul>
+
+            <!-- Actions -->
+            <div class="card-actions">
+              <button type="button" class="btn btn-primary" id="openWizardBtn">
+                Begin Online Application →
+              </button>
+              <a href="https://api.whatsapp.com/send?phone=919557291888&text=Hi%2C%20I%20am%20interested%20in%20Ecole%20Globale%20Boarding%20School%20Admissions%20for%20my%20daughter."
+                target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.448.739.961 1.196.659.587 1.215.769 1.388.856.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z" />
+                </svg>
+                Instant WhatsApp Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Sticky Floating WhatsApp Help Pill -->
+  <a href="https://api.whatsapp.com/send?phone=919557291888&text=Hi%2C%20I%20am%20inquiring%20about%20Ecole%20Globale%20Admissions."
+    target="_blank" rel="noopener noreferrer" class="floating-whatsapp"
+    aria-label="Chat on WhatsApp with Admissions Counselor">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.448.739.961 1.196.659.587 1.215.769 1.388.856.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z" />
+    </svg>
+    Chat on WhatsApp
+  </a>
+
+  <!-- ========================================================
+       MODAL 1: NATIVE INTERACTIVE MULTI-STEP ADMISSION WIZARD
+       ======================================================== -->
+  <dialog id="admissionModal" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <h2 id="modalTitle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        Online Admission Registration
+      </h2>
+      <button type="button" class="modal-close-btn" id="closeWizardBtn" aria-label="Close dialog">✕</button>
+    </div>
+
+    <!-- Multi-Step Header Indicator -->
+    <div class="wizard-steps">
+      <div class="step-indicator active" id="stepIndicator1">
+        <div class="step-circle">1</div>
+        <span>Applicant</span>
+      </div>
+      <div class="step-indicator" id="stepIndicator2">
+        <div class="step-circle">2</div>
+        <span>Curriculum</span>
+      </div>
+      <div class="step-indicator" id="stepIndicator3">
+        <div class="step-circle">3</div>
+        <span>Documents</span>
+      </div>
+      <div class="step-indicator" id="stepIndicator4">
+        <div class="step-circle">4</div>
+        <span>Payment</span>
+      </div>
+    </div>
+
+    <form id="admissionWizardForm">
+      <div class="modal-content">
+
+        <!-- STEP 1: Applicant Profile -->
+        <div class="wizard-step-pane" id="stepPane1">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="studentName">Student's Full Name <span class="req">*</span></label>
+              <input type="text" id="studentName" required placeholder="e.g. Ananya Sharma" autofocus>
+            </div>
+            <div class="form-group">
+              <label for="studentDob">Date of Birth <span class="req">*</span></label>
+              <input type="date" id="studentDob" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="targetGrade">Grade Applying For <span class="req">*</span></label>
+              <select id="targetGrade" required>
+                <option value="">Select Target Grade...</option>
+                <option value="Grade 4">Grade 4 (Junior)</option>
+                <option value="Grade 5">Grade 5 (Junior)</option>
+                <option value="Grade 6">Grade 6 (Junior)</option>
+                <option value="Grade 7" selected>Grade 7 (Middle)</option>
+                <option value="Grade 8">Grade 8 (Middle)</option>
+                <option value="Grade 9">Grade 9 (Middle)</option>
+                <option value="Grade 10">Grade 10 (Senior)</option>
+                <option value="Grade 11">Grade 11 (Senior)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="parentName">Parent / Guardian Name <span class="req">*</span></label>
+              <input type="text" id="parentName" required placeholder="e.g. Dr. Rajesh Sharma">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentEmail">Parent Email Address <span class="req">*</span></label>
+              <input type="email" id="parentEmail" required placeholder="name@domain.com">
+            </div>
+            <div class="form-group">
+              <label for="parentPhone">WhatsApp / Mobile Number <span class="req">*</span></label>
+              <input type="tel" id="parentPhone" required placeholder="+91 98765 43210">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Curriculum & Interests -->
+        <div class="wizard-step-pane" id="stepPane2" style="display: none;">
+          <label>Select Preferred Academic Board <span class="req">*</span></label>
+          <div class="board-choice-grid">
+            <div class="board-card selected" data-board="CBSE">
+              <h5>CBSE Curriculum</h5>
+              <p>National curriculum framework with robust foundations for Indian competitive entrance exams.</p>
+            </div>
+            <div class="board-card" data-board="Cambridge (CAIE / IGCSE)">
+              <h5>Cambridge International</h5>
+              <p>Global qualification recognized worldwide, prioritizing inquiry-based critical thinking.</p>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 20px;">
+            <label>Sports & Co-Curricular Focus</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.85rem; margin-top: 6px;">
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+                <input type="checkbox" checked> Equestrian & Horse Riding
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+                <input type="checkbox" checked> Olympic Swimming
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+                <input type="checkbox"> Rifle & Pistol Shooting
+              </label>
+              <label style="font-weight: normal; display: flex; align-items: center; gap: 6px;">
+                <input type="checkbox"> Classical Dance & Fine Arts
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="dietaryPref">Dietary Preference</label>
+            <select id="dietaryPref">
+              <option value="Vegetarian">Pure Vegetarian</option>
+              <option value="Non-Vegetarian" selected>Non-Vegetarian (Eggs & Poultry)</option>
+              <option value="Jain">Jain Dining (Strictly No Root Vegetables)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 3: Document Upload Simulator -->
+        <div class="wizard-step-pane" id="stepPane3" style="display: none;">
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 14px;">
+            Please upload clear scans or photos of the applicant's credentials (PDF, JPG, or PNG, max 5MB each):
+          </p>
+
+          <label>1. Recent Passport Size Photograph <span class="req">*</span></label>
+          <div class="dropzone" id="dropzonePhoto">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <div class="dropzone-text">Click or drag student photo here</div>
+            <div class="file-chip" id="photoChip" style="display: none;">student_photo.jpg (1.2 MB) ✓</div>
+          </div>
+
+          <label>2. Previous Year Report Card / Marksheet <span class="req">*</span></label>
+          <div class="dropzone" id="dropzoneReport">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            <div class="dropzone-text">Click or drag previous marksheet here</div>
+            <div class="file-chip" id="reportChip" style="display: none;">grade6_transcript.pdf (2.4 MB) ✓</div>
+          </div>
+        </div>
+
+        <!-- STEP 4: Summary, Coupon & Payment Simulation -->
+        <div class="wizard-step-pane" id="stepPane4" style="display: none;">
+          <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 12px;">Registration Summary</h4>
+          <table class="review-table">
+            <tr>
+              <td>Student Name:</td>
+              <td id="reviewStudentName">Ananya Sharma</td>
+            </tr>
+            <tr>
+              <td>Grade & Board:</td>
+              <td id="reviewGradeBoard">Grade 7 • CBSE</td>
+            </tr>
+            <tr>
+              <td>Parent Phone:</td>
+              <td id="reviewParentPhone">+91 98765 43210</td>
+            </tr>
+            <tr>
+              <td>Registration Fee:</td>
+              <td><strong>₹3,000</strong> (Non-refundable)</td>
+            </tr>
+            <tr>
+              <td>Discount Applied:</td>
+              <td id="reviewDiscountText" style="color: var(--accent-green); font-weight: 600;">None</td>
+            </tr>
+            <tr style="background: #fafbfc;">
+              <td>Net Payable:</td>
+              <td id="reviewNetPayable" style="font-size: 1.1rem; font-weight: 800; color: var(--primary);">₹3,000</td>
+            </tr>
+          </table>
+
+          <label for="couponInput">Scholarship or Early-Bird Code</label>
+          <div class="coupon-box">
+            <input type="text" id="couponInput" placeholder="Try code: EARLYBIRD or MERIT2027">
+            <button type="button" class="btn btn-outline btn-sm" id="applyCouponBtn">Apply Code</button>
+          </div>
+
+          <label>Payment Method Simulator</label>
+          <div style="display: flex; gap: 10px; margin-top: 6px;">
+            <label
+              style="border: 1px solid var(--border-color); padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; flex: 1; text-align: center; background: #fff;">
+              <input type="radio" name="paySim" checked> UPI (GPay/PhonePe)
+            </label>
+            <label
+              style="border: 1px solid var(--border-color); padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; flex: 1; text-align: center; background: #fff;">
+              <input type="radio" name="paySim"> Credit / Debit Card
+            </label>
+          </div>
+        </div>
+
+        <!-- SUCCESS CONFIRMATION VIEW -->
+        <div class="wizard-step-pane" id="stepPaneSuccess" style="display: none;">
+          <div class="success-view">
+            <div class="success-icon-wrap">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 6px;">Application Registered!</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 440px; margin: 0 auto;">
+              Thank you. The registration package has been recorded and our senior admissions counselor has been
+              notified.
+            </p>
+            <div class="ref-badge" id="generatedRefCode">EG-2027-84920</div>
+
+            <div style="display: flex; justify-content: center; gap: 12px; margin-top: 14px;">
+              <button type="button" id="receiptDownloadBtn" class="btn btn-outline btn-sm">Download Receipt
+                (PDF)</button>
+              <a href="https://api.whatsapp.com/send?phone=919557291888" target="_blank" rel="noopener noreferrer"
+                class="btn btn-whatsapp btn-sm">Direct Counselor WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="modal-footer" id="wizardFooter">
+        <button type="button" class="btn btn-outline btn-sm" id="prevStepBtn" style="visibility: hidden;">
+          ← Previous
+        </button>
+        <button type="button" class="btn btn-primary" id="nextStepBtn">
+          Next Step →
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ========================================================
+       MODAL 2: 360° INTERACTIVE VIRTUAL CAMPUS PREVIEW
+       ======================================================== -->
+  <dialog id="tourModal" aria-labelledby="tourTitle">
+    <div class="modal-header">
+      <h2 id="tourTitle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+        </svg>
+        360° Interactive Campus Explorer
+      </h2>
+      <button type="button" class="modal-close-btn" id="closeTourBtn" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-content">
+      <div class="tour-viewport" id="tourViewport"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80');">
+        <div class="tour-overlay">
+          <div
+            style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--secondary);"
+            id="tourLocationBadge">
+            Main Academic Quad & Central Library
+          </div>
+          <div>
+            <h3 id="tourHeadline" style="font-size: 1.5rem; margin-bottom: 6px;">Academic Block & Smart Classrooms</h3>
+            <p id="tourDescription" style="font-size: 0.86rem; color: #cbd5e1; max-width: 480px; margin: 0 auto;">
+              High-tech smart learning labs equipped with interactive projectors and Cambridge-certified research
+              centers.
+            </p>
+          </div>
+          <div class="tour-selector-tabs">
+            <button type="button" class="tour-tab active"
+              data-bg="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80"
+              data-badge="Main Academic Quad" data-head="Academic Block & Smart Classrooms"
+              data-desc="High-tech smart learning labs equipped with interactive projectors and Cambridge-certified research centers.">1.
+              Academic Quad</button>
+            <button type="button" class="tour-tab"
+              data-bg="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=1200&q=80"
+              data-badge="Equestrian Arena" data-head="Professional Horse Riding Grounds"
+              data-desc="State-of-the-art equestrian arena with full dressage, show-jumping hurdles, and certified stable instructors.">2.
+              Equestrian Arena</button>
+            <button type="button" class="tour-tab"
+              data-bg="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=1200&q=80"
+              data-badge="Residential Dormitories" data-head="Pastoral Houses & Boarding Rooms"
+              data-desc="Comfortable climate-controlled dormitories with round-the-clock housemistresses and dedicated quiet study corners.">3.
+              Boarding Houses</button>
+            <button type="button" class="tour-tab"
+              data-bg="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+              data-badge="Sports Complex" data-head="Olympic Swimming & Indoor Complex"
+              data-desc="Heated all-weather swimming pool, badminton arenas, squash courts, and synthetic turf pitches.">4.
+              Sports Pavilion</button>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 18px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 0.82rem; color: var(--text-muted);">Would you like an in-person physical campus
+          tour?</span>
+        <button type="button" class="btn btn-primary btn-sm" id="bookPhysicalVisitBtn">Schedule Physical Visit
+          →</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toastNotification" role="status" aria-live="polite">
+    <span id="toastMessage">Notification</span>
+  </div>
+
+  <!-- Modular Scripts (Works everywhere: File Explorer & Local Server) -->
+  <script src="js/modules/toast.js"></script>
+  <script src="js/modules/modal.js"></script>
+  <script src="js/modules/fee-calc.js"></script>
+  <script src="js/modules/tour.js"></script>
+  <script src="js/modules/wizard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

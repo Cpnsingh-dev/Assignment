@@ -1,0 +1,399 @@
+/* ========================================================
+   Dialog, Backdrop, Multi-Step Wizard & Modal Styles
+   Follows Modern Web Guidance (overscroll-behavior contain)
+   ======================================================== */
+
+/* Native Modal Base */
+dialog:modal {
+  overscroll-behavior: contain;
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+  padding: 0;
+  max-width: 640px;
+  width: 92vw;
+  margin: auto;
+  background: #ffffff;
+  animation: dialogPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+@keyframes dialogPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-header {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Multi-Step Wizard Header Stepper */
+.wizard-steps {
+  display: flex;
+  background: #fafbfc;
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 24px;
+  gap: 8px;
+}
+
+.step-indicator {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  position: relative;
+}
+
+.step-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.step-indicator.active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.step-indicator.active .step-circle {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.step-indicator.completed .step-circle {
+  background: var(--accent-green);
+  color: #ffffff;
+}
+
+.modal-content {
+  padding: 24px;
+  max-height: 72vh;
+  overflow-y: auto;
+}
+
+/* Wizard Form Elements */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+label span.req {
+  color: var(--accent-error);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background: #ffffff;
+  outline: none;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(133, 20, 75, 0.12);
+}
+
+/* Step 2: Curriculum Choice Cards */
+.board-choice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.board-card {
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  background: #fafbfc;
+}
+
+.board-card:hover {
+  border-color: #cbd5e1;
+}
+
+.board-card.selected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.board-card h5 {
+  color: var(--primary);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.board-card p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Step 3: Drag and Drop Upload Simulator */
+.dropzone {
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background: #f8fafc;
+  margin-bottom: 12px;
+}
+
+.dropzone:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.dropzone-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.file-chip {
+  background: #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Step 4: Review Summary Table */
+.review-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  font-size: 0.86rem;
+}
+
+.review-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.review-table td:first-child {
+  font-weight: 700;
+  color: var(--text-muted);
+  width: 40%;
+}
+
+.coupon-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafbfc;
+}
+
+/* Virtual Tour Modal Viewport */
+.tour-viewport {
+  background: #0f172a;
+  border-radius: var(--radius-sm);
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+.tour-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.tour-selector-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tour-tab {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.tour-tab.active {
+  background: var(--secondary);
+  color: #000;
+  border-color: var(--secondary);
+}
+
+/* Success Confirmation Screen */
+.success-view {
+  text-align: center;
+  padding: 24px 10px;
+}
+
+.success-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.ref-badge {
+  display: inline-block;
+  background: #f1f5f9;
+  border: 1px solid var(--border-color);
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 6px;
+  margin: 12px 0 18px 0;
+}
+
+/* System Toast Notifications */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast.success {
+  background: #065f46;
+  border-left: 4px solid var(--accent-green);
+}
+
